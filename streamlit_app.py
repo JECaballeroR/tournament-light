@@ -6,14 +6,19 @@ from datetime import timedelta
 from streamlit_autorefresh import st_autorefresh
 
 # ==================== CONFIGURACIÓN ====================
-API_KEY = "TU_API_KEY_AQUI"
-DEVICE = "TU_DEVICE_ID_AQUI"
-MODEL = "H6008"
+import os
+
+API_KEY = os.getenv("GOVEE_API_KEY")
+DEVICE = os.getenv("GOVEE_DEVICE")
+MODEL = os.getenv("GOVEE_MODEL")
+
 HEADERS = {
     "Content-Type": "application/json",
     "Govee-API-Key": API_KEY
 }
+
 URL = "https://openapi.api.govee.com/router/api/v1/device/control"
+
 # ======================================================
 
 
