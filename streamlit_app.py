@@ -82,7 +82,7 @@ if not st.session_state.torneo_activo:
             st.session_state.notified_red = False
             activate_dynamic_scene()
             st.success("Torneo iniciado")
-            st.experimental_rerun()
+            st.rerun()
 
 # Si el torneo está activo
 if st.session_state.torneo_activo:
