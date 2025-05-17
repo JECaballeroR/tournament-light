@@ -110,7 +110,7 @@ if st.session_state.torneo_activo:
 
         # Notificación último minuto
         red_trigger = 50 if st.session_state.duracion == 1 else tiempo_total - 60
-        if not st.session_state.notified_red and elapsed >= red_trigger:
+        if not st.session_state.notified_red and elapsed == red_trigger:
             activate_diy_scene(15894307)  # Rojo
             time.sleep(5)
             activate_dynamic_scene()
