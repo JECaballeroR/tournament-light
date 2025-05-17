@@ -101,7 +101,7 @@ if st.session_state.torneo_activo:
         st.markdown(f"## ⏳ Tiempo restante: `{mins:02d}:{secs:02d}`")
 
         # Notificación mitad de tiempo
-        if not st.session_state.notified_orange and elapsed >= tiempo_total / 2:
+        if not st.session_state.notified_orange and elapsed == tiempo_total / 2:
             activate_diy_scene(15868780)  # Naranja
             time.sleep(5)
             activate_dynamic_scene()
